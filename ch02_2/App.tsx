@@ -2,9 +2,12 @@ import React from "react"
 import { SafeAreaView, Text } from "react-native"
 
 export default function App() {
-  return (
-    <SafeAreaView>
-      <Text>Hello JSX world!</Text>
-    </SafeAreaView>
-  )
+  const isLoading = true
+  if(isLoading) {
+    return (
+      <SafeAreaView>
+        <Text>Loading...</Text>
+      </SafeAreaView>
+    )
+  }
 }
