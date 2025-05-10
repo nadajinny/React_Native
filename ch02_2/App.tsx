@@ -2,10 +2,7 @@ import React from "react"
 import { SafeAreaView, Text } from "react-native"
 
 export default function App() {
-  const children = [
-    <Text>HelloWorld!</Text>, 
-    <Text>HelloWorld!</Text>, 
-    <Text>HelloWorld!</Text>
-  ]
+  const children = [1,2,3].map((i)=><Text>Hello World!{i}</Text>)
+
   return <SafeAreaView>{children}</SafeAreaView>
 }
