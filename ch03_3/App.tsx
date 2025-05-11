@@ -1,10 +1,15 @@
 import React from "react";
-import { StyleSheet, SafeAreaView, ImageBackground, Image, View, Text, Platform} from "react-native";
+import { StyleSheet, SafeAreaView, ImageBackground, Image, View, Text, Platform, Alert} from "react-native";
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
 import * as D from './src/data'
+
 
 const avatarUrl = D.randomAvatarUrl()
 const avatarSize = 50
 const text = 'Almost before we knew it, we had left the ground. '
+const onIconpressed = () => Alert.alert('icon pressed') 
+const lightBlue500 = '#03A9F4' // Material Design light blue 500
 
 export default function App() {
   return (
@@ -17,6 +22,7 @@ export default function App() {
           <Text style={[styles.text, styles.semiBold]}>{text}[semiBold]</Text>
           <Text style={[styles.text, styles.bold]}>{text}[bold]</Text>
         </View>
+        <MaterialIcons name="home" size = {50} color={lightBlue500} onPress = {onIconpressed}/>
       </ImageBackground>
     </SafeAreaView>
   )
